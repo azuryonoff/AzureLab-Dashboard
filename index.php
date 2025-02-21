@@ -30,15 +30,10 @@ function getDisk() {
     return round(disk_free_space("/") / 1024 / 1024 / 1024, 2); // Espace disque libre en GB
 }
 
-function getIPv6() {
-    return trim(shell_exec("hostname -I | awk '{print $2}'")) ?: "Indisponible"; // Récupère l'IPv6
-}
-
 // Récupération des stats
 $cpu = getCPU();
 [$ram_used, $ram_total] = getRAM();
 $disk = getDisk();
-$ipv6 = getIPv6();
 $uptime = getUptime();
 ?>
 
@@ -123,14 +118,12 @@ $uptime = getUptime();
                 let newRAM = $(data).find("#ram").text();
                 let newDisk = $(data).find("#disk").text();
                 let newUptime = $(data).find("#uptime").text();
-                let newIPv6 = $(data).find("#ipv6").text();
 
                 // Mettre à jour les éléments de la page
                 $('#cpu').text(newCPU);
                 $('#ram').text(newRAM);
                 $('#disk').text(newDisk);
                 $('#uptime').text(newUptime);
-                $('#ipv6').text(newIPv6);
 
                 // Recréer les graphiques avec les nouvelles données
                 initCharts(newCPU.replace('%', ''), newRAM.split(' ')[0], 100, newDisk.replace(' GB', ''));
@@ -164,10 +157,6 @@ $uptime = getUptime();
             <h2>Utilisation RAM 🧠</h2>
             <div class="chart-container"><canvas id="ramChart"></canvas></div>
             <p id="ram"><?= "$ram_used MB / $ram_total MB" ?> utilisé</p>
-        </div>
-        <div class="box" id="ipv6">
-            <h2>Adresse IPv6 🌐</h2>
-            <p><?= $ipv6 ?></p>
         </div>
         <div class="box" id="uptime">
             <h2>Uptime ⏳</h2>
