@@ -23,7 +23,7 @@ Avant de déployer AzureLab, assurez-vous que votre serveur répond aux conditio
 1. Clonez ce repository sur votre serveur :
 
    ```bash
-   git clone https://github.com/nexos20levrai/AzureLab-Dashboard.git
+   git clone https://github.com/azuryonoff/AzureLab-Dashboard.git
    ```
 
 2. Accédez au répertoire du projet :
