@@ -1,6 +1,6 @@
 # AzureLab Dashboard
 
-AzureLab est un tableau de bord en temps réel pour surveiller les statistiques d'un serveur VPS. Il affiche des informations telles que l'utilisation du CPU, de la RAM, de l'espace disque, l'uptime et l'adresse IPv6. Les graphiques sont mis à jour automatiquement toutes les secondes pour refléter les dernières informations disponibles, tout en respectant un délai de mise à jour pour éviter de surcharger le serveur.
+AzureLab est un tableau de bord en temps réel pour surveiller les statistiques d'un serveur VPS. Il affiche des informations telles que l'utilisation du CPU, de la RAM, de l'espace disque et l'uptime. Les graphiques sont mis à jour automatiquement toutes les secondes pour refléter les dernières informations disponibles, tout en respectant un délai de mise à jour pour éviter de surcharger le serveur.
 
 ## Fonctionnalités
 
@@ -45,8 +45,7 @@ Avant de déployer AzureLab, assurez-vous que votre serveur répond aux conditio
 1. **Disque libre 💾** : Affiche l'espace disque libre sur votre serveur.
 2. **Utilisation CPU 🧑‍💻** : Affiche l'utilisation actuelle du CPU en pourcentage.
 3. **Utilisation RAM 🧠** : Affiche la RAM utilisée et la RAM totale.
-4. **Adresse IPv6 🌐** : Affiche l'adresse IPv6 de votre serveur.
-5. **Uptime ⏳** : Affiche depuis combien de temps votre serveur est en ligne.
+4. **Uptime ⏳** : Affiche depuis combien de temps votre serveur est en ligne.
 
 Les graphiques sont générés automatiquement à l'aide de la bibliothèque [Chart.js](https://www.chartjs.org/) et sont mis à jour toutes les secondes.
 
